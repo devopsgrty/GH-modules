@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - main
+env:
+  TF_LOG: INFO
+  TF_INPUT: false
+  TF_VERSION: ${{ vars.TF_VERSION }}
 
 jobs:
   # Setup job to output environments for matrix
