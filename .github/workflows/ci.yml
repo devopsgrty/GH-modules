@@ -10,12 +10,6 @@ env:
   TF_VERSION: ${{ vars.TF_VERSION }}
 
 jobs:
-  # Setup job to output environments for matrix
-  setup:
-    name: Setup
-    runs-on: ubuntu-latest
-
-
   # Format check
   format:
     name: Terraform Format
