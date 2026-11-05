@@ -92,7 +92,7 @@ locals {
   env_code = local.environment_short[var.environment]
   loc_code = local.location_short[local.location_normalised]
 
-  # Deterministic 4-char suffix for globally unique names (no random provider, so no plan churn)
+  # Deterministic 4-char suffix for globally unique names (no random provider, so no plan churn).
   unique_suffix = substr(md5(join("-", [var.company, var.workload, local.location_normalised, var.environment])), 0, 4)
 
   # slug      = resource type abbreviation
